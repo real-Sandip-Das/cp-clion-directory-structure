@@ -1,0 +1,9 @@
+#! /usr/bin/sh
+
+if [ $# != 1 ]; then
+	echo "Must have exactly 1 arguments"
+	exit 1
+fi
+
+rm cp
+ln -s cp$1 cp
