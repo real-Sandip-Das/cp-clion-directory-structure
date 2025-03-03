@@ -57,10 +57,8 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    // solve();
-
-    int t;
-    cin >> t;
+    int t = 1;
+    // cin >> t;
     while (t--) {
         solve();
     }
