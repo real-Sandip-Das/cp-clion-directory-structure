@@ -32,7 +32,7 @@ void dbg_out(const Head &H, Tail... T) {
 #define RREP(i, b, a) for (int i = b; i >= a; i--)
 #define EACH(x, v) for (auto x: v)
 #define REACH(x, v) for (auto &x: v)
-#define sz(x) ((int) x.size())
+#define sz(x) (static_cast<int>(x.size()))
 #define all(x) (x).begin(), (x).end()
 #define rall(x) (x).rbegin, (x).rend()
 typedef long long ll;
@@ -49,13 +49,20 @@ constexpr ll MOD = 1e9 + 7;
 constexpr ll INF = 1e9;
 constexpr ld EPS = 1e-9;
 
+void setIO(string name = "") {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	if (!name.empty()) {
+		freopen((name + ".in").c_str(), "r", stdin);  // see Input & Output
+		freopen((name + ".out").c_str(), "w", stdout);
+	}
+}
+
 void solve() {
 }
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+    setIO("");
 
     int t = 1;
     // cin >> t;
