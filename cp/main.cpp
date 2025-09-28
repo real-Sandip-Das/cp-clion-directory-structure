@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
 using namespace std;
+using namespace __gnu_pbds;
+typedef tree<int, null_type, less<>, rb_tree_tag, tree_order_statistics_node_update> indexed_set;
 
 // debug macros
 template<typename A, typename B>
@@ -34,7 +37,7 @@ void dbg_out(const Head &H, Tail... T) {
 #define REACH(x, v) for (auto &x: v)
 #define sz(x) (static_cast<int>(x.size()))
 #define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin, (x).rend()
+#define rall(x) (x).rbegin(), (x).rend()
 typedef long long ll;
 typedef long double ld;
 typedef double d;
@@ -49,13 +52,14 @@ constexpr ll MOD = 1e9 + 7;
 constexpr ll INF = 1e9;
 constexpr ld EPS = 1e-9;
 
-void setIO(string name = "") {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-	if (!name.empty()) {
-		freopen((name + ".in").c_str(), "r", stdin);  // see Input & Output
-		freopen((name + ".out").c_str(), "w", stdout);
-	}
+void setIO(const string &name = "") {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    if (!name.empty()) {
+        freopen((name + ".in").c_str(), "r", stdin);
+        freopen((name + ".out").c_str(), "w", stdout);
+    }
 }
 
 void solve() {
