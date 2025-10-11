@@ -30,6 +30,10 @@ void dbg_out(const Head &H, Tail... T) {
 #endif
 
 // code shortening macros
+#define V vector
+#define A array
+#define B begin()
+#define E end()
 #define F first
 #define S second
 #define PB push_back
